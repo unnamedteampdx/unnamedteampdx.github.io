@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+  <link href="css/index.style.css" rel="stylesheet" type = "text/css">
+</head>
+<body>
+  <div class="container">
+    <div style="text-align:center">
+      <br>
+      <br>
+      <br>
+      <br>
+      <img class="logo"  src="images/logo.svg">
+      <br>
+      <br>
+      <h6><i><big>The Ideal Destination for Enterprises' Web Solution</big></i></h6> 
+      <br> 
+      <button id="mainBtn" onclick= "location.href='contact.html'">Contact</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div style="text-align:center">
+      <h3>Scope of Service</h3>
+      <br>
+    </div>
+    <div class="row">
+      <div class="col-md-4 about-one">
+        <span class="one"> </span>
+        <h5>Web</h5>
+        <p>Design and create customized website for personal or business usage.</p>
+        <br>
+      </div>
+      <div class="col-md-4 about-one">
+        <span class="two"> </span>
+        <h5>Mobile App</h5>
+        <p>Design customized Corss-platform Mobile App for personal, business usage.</p>
+        <br>
+      </div>
+      <div class="col-md-4 about-one">
+        <span class="tre"> </span>
+        <h5>IT Support</h5>
+        <p>Windows, Linx and Mac OS trouble shooting and server database maintenance/management.</p>
+        <br>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <hr>
+  </div>    
+
+  <div class="container">
+    <div style="text-align:center">
+      <h3>Our Projects</h3>
+    </div>
+    <!-- The four columns -->
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2 about-one">
+        <!--img src="images/project1.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);"-->
+        <a href="http://www.joyhomeportland.com" alt="Joyhome" target="_blank"><img src="images/joyhome.jpg" style="width:100%"></a>
+      </div>
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2 about-one">
+        <img src="images/pending.jpg" alt="Fjords" style="width:100%">
+      </div>
+      <div class="col-md-1">
+      </div>
+
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-2 about-one">
+        <img src="images/pending.jpg" alt="Mountains" style="width:100%">
+      </div>
+      <div class="col-md-1">
+      </div>
+
+    </div>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div style="text-align:center">
+      <h3>Company Location</h3>
+      <br>
+    </div>
+    <div class="googlemap" id="map" style="width:100%;height:400px;"></div>
+    <script>
+      function myMap() {
+        var myCenter = new google.maps.LatLng(45.5068547,-122.6594829);
+        var mapCanvas = document.getElementById("map");
+        var mapOptions = {center: myCenter, zoom: 12};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({position:myCenter});
+        marker.setMap(map);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADx2DxlZCN1G7PLL479HUoOw3gpvRhEUg&callback=myMap"></script>
+    <hr>
+  </div>
+</div>
+
+</main>
+
+<footer class="container">
+  <p><i>© 2019 Unnamed Team PDX. All Rights Reserved.</i></p>
+  <!--a href="https://github.com" target="_blank"><img src="images/linkedin.jpg" alt="Facebook logo"></a-->
+</footer>
+<br>
+
+<!--button onclick="topFunction()" id="myBtn" title="Go to top">Top</button-->
+</body>
+</html>

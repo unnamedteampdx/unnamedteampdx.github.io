@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  margin:0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.logo{
+  width:10%;
+}
+
+@media screen and (max-width: 650px) {
+  .logo{
+    width:25%;
+  }
+}
+
+.container {
+  position: relative;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  /*grid-template-columns: repeat(1fr 1fr 1fr);*/
+  /*grid-template-rows: auto 1fr auto;*/
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  border:none;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 20px 20px rgba(0,0,0,.4);
+}
+
+.img-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-box img {
+  width: 100%;
+}
+
+.card:hover .img-box {
+  opacity: .9;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: -10%;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(0deg, #000000, transparent);
+  transition: .25s;
+  font-family: Arial;
+}
+
+.card:hover .content {
+  bottom: 3%;
+}
+
+.content span {
+  margin-top: 3px;
+  color: #ffeb3b;
+  font-size: 18px;
+}
+
+.content ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin: 20px auto;
+  padding: 0;
+}
+
+.content ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.content ul li a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/*
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+*/
